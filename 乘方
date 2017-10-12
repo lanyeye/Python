@@ -1,0 +1,7 @@
+#计算x的n次方，默认n=2
+def Power(x, n = 2):
+    s = 1
+    while n >= 1:
+        s = s * x
+        n = n - 1
+    return s
