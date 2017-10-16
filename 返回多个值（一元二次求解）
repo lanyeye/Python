@@ -2,3 +2,28 @@
 import math
 def quadratic(a,b,c):
 	return ((-b+math.sqrt(b*b-4*a*c))/(2*a),(-b-math.sqrt(b*b-4*a*c))/(2*a))
+
+
+
+别人的版本
+# ax^2+bx+c=0
+# a等于0时不是一元二次方程，与题意不相符
+if (a == 0):
+    print('参数错误，请重新输入！')
+
+# a不等于0时是一元二次方程，通过判断delta与0的大小，确定方程是否有实根
+else:
+    delta = b ** 2 - 4 * a * c
+    # delta大于0时，方程有两个不等的实根
+    if delta > 0:
+        x1 = (-b + math.sqrt(delta)) / (2 * a)
+        x2 = (-b - math.sqrt(delta)) / (2 * a)
+        print('此方程有两个不等实根：x1=%s x2=%s' % (x1, x2))
+    # delta等于0时，方程有两个相等的实根
+    elif delta == 0:
+        x1 = -b / (2 * a)
+        x2 = -b / (2 * a)
+        print('此方程有两个相等实根：x1=x2=%s' % (x1, x2))
+    # delta小于于0时，方程无实根
+    else:
+        print('此方程无实根')
